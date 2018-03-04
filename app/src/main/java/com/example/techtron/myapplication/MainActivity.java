@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         productList.add(
                 new Product(
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                         "13.3 inch, Silver, 1.35 kg",
                         4.3,
                         60000,
-                        R.drawable.mackbook));
+                        R.drawable.macbook));
         productList.add(
                 new Product(
                         2,
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         60000,
                         R.drawable.surface));
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        adapter = new ProductAdapter(this, productList);
+        recyclerView.setAdapter(adapter);
     }
 }
