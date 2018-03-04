@@ -60,9 +60,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textviewPrice = itemView.findViewById(R.id.textViewPrice);
 
-
-            }
-
         }
     }
 }
